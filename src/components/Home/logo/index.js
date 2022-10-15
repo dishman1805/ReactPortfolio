@@ -1,4 +1,4 @@
-import './index.scss'
+import '../../Home/logo/index.scss'
 import logo from '../../../assets/images/logo.png'
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap-trial'
@@ -31,7 +31,7 @@ const Logo = () => {
                 opacity:0,
             },{
                 opacity:0.6,
-                delay:2,
+                delay:3,
                 duration:4
             }
         )

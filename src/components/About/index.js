@@ -48,10 +48,10 @@ const About = () => {
 " />
                     </div> 
                     <div className="face3">
-                        <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
+                        <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
                     </div>
                     <div className="face4">
-                        <FontAwesomeIcon icon={faJsSquare} color="#EFD81D" />
+                        <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
                     </div>
                     <div className="face5">
                         <FontAwesomeIcon icon={faAws} color="#FF9900" />

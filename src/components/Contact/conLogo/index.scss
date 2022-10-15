@@ -1,0 +1,38 @@
+.contact-logo-container {
+    z-index: 0;
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    top:-75%;
+    right:22%;
+    bottom: 0;
+    opacity: 0;
+    left:auto;
+    margin:auto;
+
+    svg{
+        width:900px;
+        position: absolute;
+        height:auto;
+        top:-100px;
+        right:-15%;
+        transform: rotateZ( 0deg ) !important;
+        opacity: 0.1;
+        // animation-delay: 3s;
+        animation: comeIn 4s linear 5s infinite alternate;
+        // animation-duration: 30s;
+    }
+
+    @keyframes comeIn {
+        from {opacity: 0.1;}
+        to {opacity: 0.7;}
+    }
+    .svg-contact-container {
+        stroke: #91A586;
+        stroke-width: 02;
+        fill:#91A586;
+        min-width: 10px;
+        
+        }
+}
+

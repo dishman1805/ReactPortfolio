@@ -4,7 +4,10 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../animatedLetters'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhoneFlip } from '@fortawesome/free-solid-svg-icons'
 import './index.scss'
+import ConLogo from './conLogo'
 
 const Contact = () => {
   const [letterClass, setLetterClass] = useState('text-animate')
@@ -14,7 +17,8 @@ const Contact = () => {
     e.preventDefault()
 
     emailjs
-      .sendForm('gmail', 'template_YeJhZkgb', form.current, 'service_hgmahox')
+      // .sendForm(process.env.REACT_APP_SERVICEID_API_KEY,process.env.REACT_APP_TEMPLATEID_API_KEY,form.current, process.env.REACT_APP_PUBLICKEY_API_KEY)
+      .sendForm("service_6cdqp6h","template_da1o6jk",form.current,"nWIU9LJqm7xyVVflT")
       .then(
         () => {
           alert('Message successfully sent!')
@@ -29,6 +33,9 @@ const Contact = () => {
   return (
     <>
       <div className="container contact-page">
+        <div className='contact-logo'>
+        <FontAwesomeIcon icon = {faPhoneFlip} color="#91A586" />
+        </div>
         <div className="text-zone">
           <h1>
             <AnimatedLetters
@@ -38,7 +45,7 @@ const Contact = () => {
             />
           </h1>
           <p>
-            I am interested in freelance opportunities - especially on ambitious
+            I am interested in any opportunities - especially on ambitious
             or large projects. However, if you have any other requests or
             questions, don't hesitate to contact me using below form either.
           </p>
@@ -97,6 +104,7 @@ const Contact = () => {
           </MapContainer>
         </div> */}
       </div>
+      <ConLogo />
       <Loader type="pacman" />
     </>
   )

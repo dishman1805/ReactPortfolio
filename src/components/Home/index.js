@@ -10,7 +10,7 @@ const Home = () => {
     const hiArray = ['H','i',',']
     const imArray = ['I','\'','m']
     const nameArray = ['y', 'l', 'e']
-    const jobArray = ['s','t','u','d','e','n','t']
+    const jobArray = ['-',' ','s','t','u','d','e','n','t']
 
     // useEffect(() => {
     //     return setTimeout(() => {
@@ -28,8 +28,10 @@ const Home = () => {
                 <AnimatedLetters letterClass={letterClass} strArray={nameArray} idx={15}/>
                 <br />
                 <AnimatedLetters letterClass={letterClass} strArray={jobArray} idx={22}/>
+                {/* <br />  */}
+                {/* <AnimatedLetters letterClass={letterClass} strArray={funArray} idx={22}/> */}
                 </h1>
-                <h2>Java / Javascript / Python / React / Machine Learning /<br/> C++ / Azure</h2>
+                <h2>Java / Javascript / Python / React / Machine Learning /<br/> C++ / Azure / Problem solving / Learning agility</h2>
                 <Link to="/contact" className='flat-button'>CONTACT ME</Link>
             </div>   
             <Logo />   

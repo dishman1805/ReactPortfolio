@@ -30,7 +30,7 @@
         opacity: 0;
         transform: rotateZ(-15deg);
         z-index: 1;
-        animation: fadeIn 10s ease 3s;
+        animation: fadeIn 10s infinite alternate 3s;
         animation-fill-mode: forwards;
     }
     .svg-container {

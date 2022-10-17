@@ -1,52 +1,53 @@
 import '../../Home/logo/index.scss'
 import logo from '../../../assets/images/logo.png'
 import { useEffect, useRef } from 'react';
-import gsap from 'gsap-trial'
-import DrawSVGPlugin from 'gsap-trial/DrawSVGPlugin';
+import { gsap } from "gsap";
+import { DrawSVGPlugin } from "gsap-trial/DrawSVGPlugin";
 const Logo = () => {
 
     const bgRef = useRef();
     const outlineLogoRef = useRef();
     const solidLogoRef = useRef();
 
-
-    useEffect(() => {
-        gsap.registerPlugin(DrawSVGPlugin)
+    // useEffect(() => {
+    //     gsap.registerPlugin(DrawSVGPlugin)
         
-        gsap
-        .timeline()
-        .to(bgRef.current,{
-            duration: 1,
-            opacity: 1
-        })
-        .from(
-            outlineLogoRef.current,{
-                drawSVG: 1,
-                duration:20
-            }
-        )
+    //     gsap
+    //     .timeline()
+    //     .to(bgRef.current,{
+    //         duration: 1,
+    //         opacity: 1
+    //     })
+    //     .from(
+    //         outlineLogoRef.current,{
+    //             drawSVG: 1,
+    //             duration:20
+    //         }
+    //     )
 
-        gsap.fromTo(
-            solidLogoRef.current,{
-                opacity:0,
-            },{
-                opacity:0.6,
-                delay:3,
-                duration:4
-            }
-        )
-    })
+    //     gsap.fromTo(
+    //         solidLogoRef.current,{
+    //             opacity:0,
+    //         },{
+    //             opacity:0.6,
+    //             delay:3,
+    //             duration:4
+    //         }
+    //     )
+    // })
+
+
+
     return (
         <div className='logo-container' ref={bgRef}>
-            <img ref={solidLogoRef} className='solid-logo' src={logo} alt='K' />
-
+            <img ref={solidLogoRef} className='solid-logo' src={logo} alt='K' opacity='0'/>
                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="654.000000pt" height="786.000000pt" viewBox="0 0 654.000000 786.000000"
                 preserveAspectRatio="xMidYMid meet">
 
                     <g transform="translate(0.000000,786.000000) scale(0.100000,-0.100000)"
                     fill="none" className='svg-container'>
-                    <path ref={outlineLogoRef} d="M38 5338 c1 -1377 3 -2951 5 -3498 l2 -995 111 205 c60 113 114 205
+                    <path id="drawable" ref={outlineLogoRef} d="M38 5338 c1 -1377 3 -2951 5 -3498 l2 -995 111 205 c60 113 114 205
                     120 205 5 0 11 -88 14 -207 l5 -208 198 368 198 367 2 3132 2 3133 -330 0
                     -330 0 3 -2502z
 
